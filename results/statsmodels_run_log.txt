@@ -1,0 +1,37 @@
+train rows = 314, test rows = 78
+selected alpha: Ridge = 0.01597 (lambda_equiv 5.016), Lasso = 0.06261 (lambda_equiv 19.658)
+
+Standardized coefficients (training set):
+                  OLS    Ridge    Lasso
+intercept     23.6102  23.6102  23.6102
+cylinders     -0.1931  -0.2752  -0.1509
+displacement   0.0810  -0.3515   0.0000
+horsepower    -0.0874  -0.4120  -0.1671
+weight        -5.5169  -4.7868  -5.3947
+acceleration   0.1663  -0.0098   0.0902
+model_year     2.7513   2.6577   2.7000
+
+Coefficients in original units:
+                   OLS     Ridge     Lasso
+intercept    -14.59995 -12.29165 -13.30611
+cylinders     -0.11361  -0.16191  -0.08880
+displacement   0.00078  -0.00339   0.00000
+horsepower    -0.00229  -0.01077  -0.00437
+weight        -0.00656  -0.00569  -0.00641
+acceleration   0.05911  -0.00349   0.03206
+model_year     0.75560   0.72988   0.74152
+
+Summary:
+model  alpha  lambda_equiv  n_zero_coefs  cv_rmse  train_r2  train_rmse  test_r2  test_rmse  test_mae
+  OLS    NaN           NaN             0   3.5852    0.8105      3.4531   0.7945     3.2526    2.5068
+Ridge 0.0160        5.0156             0   3.5747    0.8097      3.4611   0.7914     3.2769    2.5190
+Lasso 0.0626       19.6580             1   3.5414    0.8104      3.4543   0.7960     3.2404    2.4870
+
+OLS refit on the Lasso-selected variables (inference is post-selection, optimistic):
+                 coef  std_err         t  p_value   ci_low  ci_high
+intercept     23.6102   0.1968  119.9929   0.0000  23.2230  23.9974
+cylinders     -0.1510   0.4730   -0.3192   0.7498  -1.0817   0.7798
+horsepower    -0.0754   0.5900   -0.1278   0.8984  -1.2363   1.0854
+weight        -5.4915   0.5634   -9.7469   0.0000  -6.6001  -4.3829
+acceleration   0.1628   0.3202    0.5085   0.6114  -0.4673   0.7930
+model_year     2.7498   0.2219   12.3913   0.0000   2.3132   3.1865

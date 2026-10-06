@@ -1,0 +1,14 @@
+model,metric,value
+Ridge,path_max_abs_diff,7.552142022859698e-09
+Ridge,path_median_abs_diff,6.576262867596938e-09
+Lasso,path_max_abs_diff,0.07182939131620877
+Lasso,path_median_abs_diff,0.02002599290092095
+OLS,final_max_abs_coef_diff,7.555991388130678e-09
+OLS,final_test_rmse_diff,4.440892098500626e-16
+OLS,final_test_r2_diff,2.220446049250313e-16
+Ridge,final_max_abs_coef_diff,0.20082383533225734
+Ridge,final_test_rmse_diff,0.0069357574758557305
+Ridge,final_test_r2_diff,0.0008822104342137704
+Lasso,final_max_abs_coef_diff,0.043405777169978066
+Lasso,final_test_rmse_diff,0.0072175482297009985
+Lasso,final_test_r2_diff,0.0009077916869120184
